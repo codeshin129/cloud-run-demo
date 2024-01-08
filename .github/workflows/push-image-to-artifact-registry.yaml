@@ -17,7 +17,7 @@ jobs:
         ref: ${{ github.ref }}
 
     - name: Setup Google Cloud
-      uses: google-github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@v2
       with:
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
         project_id: master-test-409516
