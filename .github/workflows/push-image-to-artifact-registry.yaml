@@ -39,3 +39,7 @@ jobs:
     - name: Push
       run: |
         docker push asia-northeast2-docker.pkg.dev/master-test-409516/ar-test/cloud-run-demo:${{ env.TAG }}
+    
+    - name: Deploy
+      run: |
+        gcloud run deploy --image asia-northeast2-docker.pkg.dev/master-test-409516/ar-test/cloud-run-demo:${{ env.TAG }} --platform=managed --project=master-test-409516
