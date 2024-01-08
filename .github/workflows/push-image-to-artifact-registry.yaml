@@ -42,4 +42,4 @@ jobs:
     
     - name: Deploy
       run: |
-        gcloud run deploy cloud-run-demo --image=asia-northeast2-docker.pkg.dev/master-test-409516/ar-test/cloud-run-demo:${{ env.TAG }} --platform=managed --project=master-test-409516
+        gcloud run deploy cloud-run-demo --region=asia-northeast2 --image=asia-northeast2-docker.pkg.dev/master-test-409516/ar-test/cloud-run-demo:${{ env.TAG }} --platform=managed --project=master-test-409516
